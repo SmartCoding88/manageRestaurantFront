@@ -9,8 +9,10 @@ File: scss
 
 $bodyfont: 'Poppins', sans-serif;
 $headingfont: 'Poppins', sans-serif;
+@use '@angular/material' as mat;
 
-@import '~@angular/material/theming';
+//@import '~@angular/material/theming';
+
 
 /*Material Theme Colors*/
 
@@ -21,7 +23,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 $background: map-get($theme, background);
 $foreground: map-get($theme, foreground);
 
-@include mat-core();
+@include mat.core();
 
 $custom-typography: mat-typography-config(
   $font-family: 'Poppins, sans-serif'
